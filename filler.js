@@ -22,38 +22,32 @@ async function fillUser(page)
 
     const input2 = await page.$("input[name='password']");
     await input.click({clickCount: 1});
-    await input2.type('password');
+    await input2.type('psasword$');
     await page.waitFor(300);
 
     const input3 = await page.$("input[name='submit']");
     await input3.click({clickCount: 1});
 
-}
-
-async function duoMobile(page)
-{
-    await page.waitFor(5000);
-    const input4 = document.getElementsByTagName("select");
-    await input4.click({clickCount: 1});
-
-    const input5 = document.getElementsByTagName("option")[3];
-    await input5.click({clickCount: 1});
-
-    //await input4.click({clickCount: 1});
+    await page.waitFor(3500);
+    await page.$eval("button[class='auth-button positive']", elem => elem.click());
     
-    //await input4.click({clickCount: 1});
-    //const input5 = await page.$("option[value='phone4']");
-    //await input5.click({clickCount: 1});
 
+    //await page.waitFor(1500);
 
-    //const input5 = await page.$("")
 }
+
+// async function duoMobile(page)
+// {
+//     await page.waitFor(3500);
+//     const input4 = page.$("button[class='auth-button positive']");
+//     await input4.click({clickCount: 1});
+// }
 
 async function checkout()
 {
     const page = await Browser();
     await fillUser(page);
-    await duoMobile(page);
+    // duoMobile(page);
 }
 
 checkout();
