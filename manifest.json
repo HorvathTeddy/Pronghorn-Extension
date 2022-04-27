@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Pronghorn Extension",
+    "description": "Automatically fills forms on any web page.",
+    "homepage_url": "https://www.google.com",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "Click me",
+        "default_popup": "index.html",
+        "defualt_icon": "icon.png"
+    }, 
+    "permissions": [
+        "tabs",
+        "http://*/*"
+        "https://*/*"
+
+    ]
+}
