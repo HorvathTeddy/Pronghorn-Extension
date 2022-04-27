@@ -1,2 +1,2 @@
-# Pronghorn-Extension
-An extension that automatically fills forms. 
+# humboldt-login-filler
+An extension that automatically fills cas.humboldt login.
